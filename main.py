@@ -16,13 +16,6 @@ def display_welcome_form():
     username = request.args.get('username')
     return render_template('welcome.html', name=username, title='Welcome Page')
 
-def is_integer(num):
-    try:
-        int(num)
-        return True
-    except ValueError:
-        return False
-
 def is_between_range(min, max, len):
     if len > max or len < min:
         return False
